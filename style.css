@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+:root{
+    --color_primario: #424949;
+    --color_secundario: white;
+    --color_terciario: #000000;
+    --color_hover:#909497;
+
+    --fuente_roboto:"Roboto Slab", sans-serif;
+}
+
+*{
+    background-color: var(--color_primario);
+    /*el backgorund es neesario cambiarlo a imagen( investigar)*/
+    font-family:var(--fuente_roboto);
+    font-weight: 400;
+    margin:0;
+    padding:0;  
+}
+
+.logo{
+    padding-top: 20px ;   
+    width: 8%;
+}
+
+.header__titulo{
+    font-size:1.8rem;
+    text-align: center;/*alineacion del texto*/
+    color: var(--color_secundario);
+}
+
+
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.contenedor_input{
+    /* cambiar bordes (color y tipo y angulo)*/
+    border: none;
+    background-color:var(--color_primario);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    color:var(--color_secundario);/*color del texto ingresado en el campo*/
+    margin-top: 50px;
+    font-size: 1.125rem;
+    width: 400px;
+}
+
+::placeholder{color:var(--color_secundario);
+    font-size: 1.125rem;
+    font-weight: 400;
+} /*modifica el color del texto sugerido*/
+
+.contenedor_input:focus{
+    outline: none;
+}
+
+.info{
+    margin-left: 70px;
+    color: var(--color_secundario);
+    display: flex;
+    gap: 10px;
+}
+
+.contenedor_mensaje{
+    background-color:var(--color_secundario);
+    background-image: url("/images/Muñeco.png") ;
+    background-repeat: no-repeat;
+    background-size: 60%;/*tamaño de la imagen*/
+    background-position: center 100px;/*la imagen centra horizontalmente y a 10 px del borde superior*/
+    border: none;
+    border-radius: 24px;
+    color: var(--color_terciario);
+    margin-left: 320px;
+    margin-top: 50px ; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 1.125rem;
+    width: 300px;
+    height: 400px;
+    position: absolute;/* crea elementos fijos en la pantalla*/
+}
+
+.contenedor_mensaje:focus {
+    outline: none;
+}
+
+
+.botones{
+    display: flex;
+    margin-top: 90px;
+    margin-left: 70px;
+    gap: 30px;
+}
+
+.boton_encriptar{
+    background-color:var(--color_secundario);
+    border: 3px solid var(--color_terciario);
+    border-radius: 20px;
+    color:var(--color_terciario);/*color de la letra*/
+    cursor: pointer;/*el cursor cambiará a la forma de una mano*/
+    height:  50px;
+    width: 200px;
+    font-family:var(--fuente_roboto);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.boton_encriptar:hover{
+    background-color: var(--color_hover);
+    transform: scale(1.15);
+}
+
+.boton_desencriptar{
+    background-color:var(--color_terciario);
+    border: 3px solid var(--color_secundario);
+    border-radius: 20px;
+    color: var(--color_secundario);/*color letra*/
+    cursor: pointer;/*el cursor cambiará a la forma de una mano*/
+    height:  50px;
+    width: 200px;
+    font-family:var(--fuente_roboto);
+    font-weight: 400;
+    font-size: 1rem;  
+}
+
+.boton_desencriptar:hover{
+    background-color: var(--color_hover);
+    transform: scale(1.15);
+}
+
+.copiar{
+    background-color: var(--color_terciario);
+    border: 3px solid var(--color_terciario);
+    border-radius: 20px;
+    color: var(--color_secundario);/*color letra*/
+    position:absolute;/*posicionar elementos de forma precisa dentro de tu página web.*/
+    height:  50px;
+    cursor: pointer;
+    width: 200px;
+    font-family:var(--fuente_roboto);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 400px;
+    margin-top: 380px;
+}
+
+.copiar:hover{
+    background-color: var(--color_hover);
+    transform: scale(1.15);
+}
+
+.gfooter{
+    background-color: #b2babb;
+    color: var(--color_secundario);
+    text-align: center;
+    font-family:var(--fuente_roboto);
+    font-size: 1rem;
+    font-weight: 400;
+    padding:18px;
+    color: var(--color_terciario);
+    bottom:0;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+
+    .header__titulo{
+        text-align: center;
+    }
+
+    main{
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    ::placeholder{color:var(--color_secundario);
+        font-size: 1.25rem;
+        font-weight: 400;
+    } /*modifica el color del texto sugerido*/
+    
+    .contenedor_input{
+        width: 80%;
+    }
+    .contenedor_mensaje{
+        margin-left: auto;
+        margin-top: 5px;
+        margin-right: auto;
+        height: auto;
+        width: 90%;
+        background-image: none;
+        margin: 35px; 
+        position: relative;
+    }
+
+    .copiar{
+
+        margin-left: 20px;
+        margin-bottom: 80px;
+        margin-top: 25px;
+        width: 100%;
+        z-index: 10;
+        position: relative;
+        justify-content: center;
+    }
+    .gfooter{
+        position: fixed;
+        width: 100%
+        
+    }
+}
+
+
+@media (max-width: 480px){
+
+    .header__titulo{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    body{
+        height: auto;
+    }
+    
+    .contenedor_input{
+        height: 170px;
+        width: 90%;
+    }
+
+    .contenedor_mensaje{
+        margin-left: auto;
+        margin-top: 5px;
+        margin-right: auto;
+        height: auto;
+        width: 90%;
+        height: 170px;
+        background-image: none;
+        margin: 35px; 
+        position: relative;
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copiar{
+        margin-left :100px;   
+        margin-top: 20px;
+        z-index: 10;/* se utiliza para saber que objeto esta por debajo de otro*/
+        height:  50px;
+        width: 200px;
+        position: relative;
+
+    }
+
+    .gfooter{
+        position: fixed;
+        width: 100%;
+    }
+
+}
+

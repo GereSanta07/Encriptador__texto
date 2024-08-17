@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css"> <!--enlace que conecta el css con el html--> 
+</head>
+<body>
+   <header>
+    <img src="/images/Logo.png" alt="Logotipo de alura" class="logo">
+      <h1 class="header__titulo">Encriptador de texto</h1>
+   </header>
+   
+   <main>
+    <!---primera seccion donde tendremos campo de texto(input), botones y caja de informacion-->        
+      <section>
+        <!---area de texto de 30 columnas y 10 areas-->        <!--placeholder: texto provisional en campos, donde recomendamos al usuario-->
+        <textarea class="contenedor_input" cols="30" rows="10" placeholder="Ingrese texto aquí" id="text_input"></textarea>
+        <!---caja de informacion sugeridaa-->
+          <div >
+              <h5 class="info" > <img src="/images/Group.png" alt=" signo de exclamacion como si fuera advertencia">Solo letras minúsculas y sin caracteres</h5>
+          </div>
+        <!---caja de botones-->        
+          <div class="botones">
+              <button class="boton_encriptar" onclick="verificacion()">Encriptar</button>
+              <button class="boton_desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+          </div>       
+      </section>
+        <!---segunda seccion (campo de resultado y boton de copiar el resultado)--> 
+      <section>
+        <textarea class="contenedor_mensaje" cols="20" rows="10"></textarea>
+          <div>
+              <button class="copiar" onclick="boton_copiar()">Copiar</button>            
+          </div>
+      </section>
+   </main>
+   <footer class="gfooter">  
+    Desarrollado por Geremy Santa 
+  </footer>
+<script src="/script.js"></script>
+</body>
+</html>
